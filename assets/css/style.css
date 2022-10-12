@@ -1,0 +1,21 @@
+.pace {
+    display: none;
+}
+
+.main-style {
+    color: white;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #16213E 50%, #533483 150% );
+    /* background: url(../img/cover/cover-scrum-board.png) no-repeat fixed;
+    background-size: 360px;
+    background-position: right bottom; */
+}
+
+.content{
+    visibility: hidden;
+}
+.add-task{
+    width: 100px;
+    height: 30px;
+    background-color: #E94560;
+}
