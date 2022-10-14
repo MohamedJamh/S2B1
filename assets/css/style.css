@@ -24,9 +24,6 @@
     height: 30px;
     background-color: #E94560;
 }
-.plus{
-    font-size: 15px;
-}
 .table-container{
     overflow: hidden;
     background-color: #0F3460;
@@ -43,8 +40,7 @@
     margin: 9px;
     width: 1em;
 }
-.bi-question-circle-fill{
-    color: rgb(100, 227, 100);
+.bi-question-circle-fill , .bi-check-circle-fill {
     font-size: 1.2em;
 }
 .task{
@@ -59,11 +55,18 @@
 .task-title{
     font-size: 1.5em
 }
-.task-priority{
+.task-priority , .cancel-btn {
     background-color: #E94560;
     color: white;
 }
-.task-type{
+.task-type , .save-btn{
     background-color: white;
     color: #E94560;
+}
+.spinner-border{
+    width: 18px;
+    height: 18px;
+}
+.modal-dialog{
+    margin-top: 10vh;
 }
