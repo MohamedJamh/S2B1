@@ -41,13 +41,13 @@
 			
 			<div class="row">
 				<div class="col-lg-6 col-xl-4 g-3">
-					<div class="table-container p-0">
+					<div class="table-container to-do p-0">
 						<div class="table-header border-0">
 							<h4 class="table-title p-3">To do (<span id="to-do-tasks-count">5</span>)</h4>
 						</div>
 						<div class="table-body m-0" id="to-do-tasks">
 							<!-- TO DO TASKS HERE -->
-							<button class="task d-flex p-3 w-100 border-0 border-bottom">
+							<!-- <button class="task d-flex p-3 w-100 border-0 border-bottom">
 								<span class="task-status">
 									<i class="bi bi-question-circle-fill text-green"></i>
 								</span>
@@ -130,21 +130,21 @@
 										<span class="task-type p-2 rounded-3">Feature</span>
 									</div>
 								</div>
-							</button>
+							</button> -->
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6 col-xl-4 g-3">
-					<div class="table-container p-0">
+					<div class="table-container in-progress p-0">
 						<div class="table-header border-0">
 							<h4 class="table-title p-3">In Progress (<span id="in-progress-tasks-count">4</span>)</h4>
 						</div>
 						<div class="table-body m-0" id="in-progress-tasks">
 							<!-- IN PROGRESS TASKS HERE -->
-							<button class="task d-flex p-3 w-100 border-0 border-bottom">
+							<!-- <button class="task d-flex p-3 w-100 border-0 border-bottom">
 								<div class="task-status pt-1">
-									<div class="spinner-border text-green" role="status">
-									</div>
+									<i class="spinner-border text-green">
+									</i>
 								</div>
 								<div class="task-body text-start pl-3">
 									<div class="task-title">Describe steps to reproduce an issue</div>
@@ -208,12 +208,12 @@
 										<span class="task-type p-2 rounded-3">Bug</span>
 									</div>
 								</div>
-							</button>
+							</button> -->
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-12 col-xl-4 g-3">
-					<div class="table-container p-0">
+					<div class="table-container done p-0">
 						<div class="table-header border-0">
 							<h4 class="table-title p-3">Done (<span id="done-tasks-count">4</span>)</h4>
 						</div>
@@ -310,13 +310,13 @@
 				</div>
 				<div class="modal-body">
 					<div class="mb-3">
-						<label class="form-label text-white">Title</label>
+						<label class="form-label text-white">Add task</label>
 						<input type="text" class="form-control form-control-sm">
 					</div>
 					<div class="mb-3">
-						<label class="form-label text-white">Title</label>
+						<label id="txt_title" class="form-label text-white">Title</label>
 						<div>
-							<input class="form-check-input ms-5" type="radio" name="type" >
+							<input id="rbtn_bug" class="form-check-input ms-5" type="radio" name="type" >
 							<label class="form-check-label text-white">
 								Bug
 							</label>
@@ -328,35 +328,35 @@
 					</div>
 					<div class="mb-3">
 						<label class="form-label text-white">Statut</label>
-						<select class="form-select form-select-sm" aria-label="Default select example">
+						<select id="select_status" class="form-select form-select-sm" aria-label="Default select example">
 							<option selected>Please Select</option>
-							<option value="1">Low</option>
-							<option value="2">Medium</option>
-							<option value="3">High</option>
-							<option value="4">Critical</option>
+							<option value="to-do">To Do</option>
+							<option value="in-progress">In Progresse</option>
+							<option value="done">Done</option>
 						</select>
 					</div>
 					<div class="mb-3">
 						<label class="form-label text-white">Priority</label>
-						<select class="form-select form-select-sm">
+						<select id="select_priority" class="form-select form-select-sm">
 							<option selected>Please Select</option>
-							<option value="2">To Do</option>
-							<option value="1">In Progresse</option>
-							<option value="3">Done</option>
+							<option value="Low">Low</option>
+							<option value="Medium">Medium</option>
+							<option value="High">High</option>
+							<option value="Critical">Critical</option>
 						</select>
 					</div>
 					<div class="mb-3">
 						<label class="form-label text-white">Date</label>
-						<input type="date" class="form-control form-control-sm">
+						<input id="date_picker" type="date" class="form-control form-control-sm">
 					</div>
 					<div class="mb-3 ">
 						<label class="form-label text-white">Description</label>
-						<textarea class="form-control" rows="3"></textarea>
+						<textarea id="area_description" class="form-control" rows="3"></textarea>
 					</div>
 				</div>
 				<div class="modal-footer border-0 pt-0">
 					<button  type="button" class="btn save-btn rounded-pill" data-bs-dismiss="modal">Close</button>
-					<button type="button" class="btn cancel-btn rounded-pill">Save</button>
+					<button type="button" class="btn cancel-btn rounded-pill" data-bs-dismiss="modal" onclick="printData();">Save</button>
 				</div>
 			</div>
 		</div>
@@ -365,6 +365,8 @@
 	<!-- ================== BEGIN core-js ================== -->
 	<script src="/assets/js/vendor.min.js"></script>
 	<script src="/assets/js/app.min.js"></script>
+	<script src="/assets/js/data.js"></script>
+	<script src="/assets/js/script.js"></script>
 	<!-- ================== END core-js ================== -->
 </body>
 </html>
