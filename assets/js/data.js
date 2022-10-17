@@ -75,7 +75,7 @@ var tasks = [
         title         :   'Describe edge cases and provide constraints',
         type          :   'Feature',
         priority      :   'High',
-        status        :   'In Progress',
+        status        :   'in-progress',
         date          :   '2022-10-08',
         description   :   `Hardly any developer likes constraints, but if there are some, let them be communicated early. Do we need to support some specific browsers? Does this script need to run below a specific amount of time? Is it crucial for this endpoint to respond in no more than n milliseconds? If there are some such concerns, make sure they are included in your descriptions. Also describing any edge cases might be beneficial. Maybe we have some query limit on a given service? If you have such knowledge it is always beneficial for your devs to know about it upfront.`,
     },

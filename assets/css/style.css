@@ -69,3 +69,12 @@
 .modal-dialog{
     margin-top: 10vh;
 }
+.update-btn{
+    background-color: #FF9F29;
+}
+.delete-btn{
+    background-color: #6E85B7;
+}
+.non-update-mode{
+    display: none;
+}
