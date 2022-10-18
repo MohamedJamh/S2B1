@@ -142,12 +142,70 @@
 					</div>
 				</div>
 				<div class="modal-footer border-0 pt-0">
-					<button  type="button" class="btn save-btn rounded-pill" data-bs-dismiss="modal">Close</button>
-					<div id="update-btns-container" class="non-update-mode">
-						<button  type="button" class="btn delete-btn text-white rounded-pill" data-bs-dismiss="modal">Delete</button>
-						<button  type="button" class="btn update-btn text-white rounded-pill" data-bs-dismiss="modal">Upadate</button>
+					<button  type="button" class="btn cancel-btn rounded-pill" data-bs-dismiss="modal">Close</button>
+					<button type="button" class="btn save-btn rounded-pill" data-bs-dismiss="modal" onclick="add();">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="modal-task-update">
+		<!-- Modal content goes here -->
+		<div class="modal-dialog" >
+			<div class="modal-content table-container">
+				<div class="modal-header border-0 table-header">
+					<h5 class="modal-title text-white">Task</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="mb-3">
+						<label class="form-label text-white">Title</label>
+						<input id="update_txt_title" type="text" class="form-control form-control-sm">
 					</div>
-					<button type="button" class="btn cancel-btn rounded-pill" data-bs-dismiss="modal" onclick="ajouter();">Save</button>
+					<div class="mb-3">
+						<label class="form-label text-white">Type</label>
+						<div>
+							<input id="update_rbtn_bug" class="form-check-input ms-5" type="radio" name="type" checked>
+							<label class="form-check-label text-white">
+								Bug
+							</label>
+							<input id="update_rbtn_feature" class="form-check-input ms-5" type="radio" name="type">
+							<label class="form-check-label text-white">
+								Feature
+							</label>
+						</div>
+					</div>
+					<div class="mb-3">
+						<label class="form-label text-white">Statut</label>
+						<select id="update_select_status" class="form-select form-select-sm" aria-label="Default select example">
+							<option selected>Please Select</option>
+							<option value="to-do">To Do</option>
+							<option value="in-progress">In Progresse</option>
+							<option value="done">Done</option>
+						</select>
+					</div>
+					<div class="mb-3">
+						<label class="form-label text-white">Priority</label>
+						<select id="update_select_priority" class="form-select form-select-sm">
+							<option selected>Please Select</option>
+							<option value="Low">Low</option>
+							<option value="Medium">Medium</option>
+							<option value="High">High</option>
+							<option value="Critical">Critical</option>
+						</select>
+					</div>
+					<div class="mb-3">
+						<label class="form-label text-white">Date</label>
+						<input id="update_date_picker" type="date" class="form-control form-control-sm">
+					</div>
+					<div class="mb-3 ">
+						<label class="form-label text-white">Description</label>
+						<textarea id="update_area_description" class="form-control" rows="3"></textarea>
+					</div>
+				</div>
+				<div class="modal-footer border-0 pt-0">
+					<button type="button" class="btn cancel-btn rounded-pill" data-bs-dismiss="modal">Cancel</button>
+					<button  type="button" class="btn delete-btn text-white rounded-pill" data-bs-dismiss="modal" onclick="deleteTask();">Delete</button>
+					<button  type="button" class="btn update-btn text-white rounded-pill" data-bs-dismiss="modal" onclick="updateTask();">Upadate</button>
 				</div>
 			</div>
 		</div>

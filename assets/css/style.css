@@ -54,11 +54,11 @@
 .task-title{
     font-size: 1.5em
 }
-.task-priority , .cancel-btn {
+.task-priority , .save-btn {
     background-color: #E94560;
     color: white;
 }
-.task-type , .save-btn{
+.task-type , .cancel-btn{
     background-color: white;
     color: #E94560;
 }

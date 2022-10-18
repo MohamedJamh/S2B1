@@ -38,7 +38,7 @@ var tasks = [
         id:4,
         title         :   'Provide examples, credentials, etc',
         type          :   'Feature',
-        priority      :   'High',
+        priority      :   'Low',
         status        :   'to-do',
         date          :   '2022-10-08',
         description   :   `If the expectation is to process or generate some file — attach an example of such a file. If the goal is to integrate what is being developed with some service, ensure your devs have access to this service and its documentation. This list could go on and on — the bottom line is — if there is something that our developer might make use of, try to foresee it and provide them with (access to) it.`,
