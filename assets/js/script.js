@@ -144,7 +144,15 @@ function updateTask(){
     loadData();
 }
 function deleteTask(){
-    // locat_tasks.splice(task_to_update_id-1,1);
+    var temp = [];
+    for(t of locat_tasks){
+        if(t.id == task_to_update_id){
+            continue;
+        }else{
+            temp.push(t);
+        }
+    }
+    locat_tasks = temp;
     clearTasks();
     loadData();
 }
