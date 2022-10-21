@@ -18,13 +18,22 @@ var update_select_status = document.getElementById('update_select_status');
 var update_select_priority = document.getElementById('update_select_priority');
 var update_date_picker = document.getElementById('update_date_picker');
 var update_area_description = document.getElementById('update_area_description');
-//table counts
+//tables count
 function update_task_counts(){
     document.getElementById("to-do-tasks-count").textContent = to_do_count;
     document.getElementById("in-progress-tasks-count").textContent = in_progress_count;
     document.getElementById("done-tasks-count").textContent = done_count;
 }
-// CRUD function
+// relation functions
+function clearModalInputs(){
+    txt_title.value = ""; 
+    rbtn_bug.value = ""; 
+    rbtn_feature.value = ""; 
+    select_status.value = ""; 
+    select_priority.value = ""; 
+    date_picker.value = ""; 
+    area_description.value = ""; 
+}
 function setDataToUpdate(id){
     for(t of locat_tasks){
         if(t.id == id){
@@ -74,7 +83,7 @@ function printTask(t){
         <div class="task-title">${t.title}</div>
         <div class="task-details">
             <div class="task-date">#${t.id} created in ${t.date}</div>
-            <div class="task-description" title="${t.description}">${t.description.slice(0,55)}...</div>
+            <div class="task-description" title="${t.description}">${t.description.slice(0,50)}...</div>
         </div>
         <div class="task-features">
             <span class="task-priority p-2 rounded-3">${t.priority}</span>
@@ -91,16 +100,18 @@ function clearTasks(){
         el.remove();
     }
     to_do_count = in_progress_count = done_count = 0;
+    update_task_counts();
 }
 function loadData(){
     for (t of locat_tasks){
         printTask(t);
         auto_id = t.id + 1;
+        
     }
 }
+// CRUD function
 function add(){
 
-    txt_title.value = "";
     rbtn_bug.checked = true;
     
     let task_type ;
@@ -122,6 +133,7 @@ function add(){
     }
     locat_tasks.push(task);
     printTask(task);
+    clearModalInputs();
     auto_id++;
 }
 function updateTask(){
